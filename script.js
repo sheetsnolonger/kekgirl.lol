@@ -1,26 +1,30 @@
-let score = 0;
-
-const tracks = [
-  "under my bed",
-  "audio diary",
-  "and i dance",
-  "static angel"
+const songs = [
+  "static angel - signal loss",
+  "blue cassette - night drive",
+  "ghost frequency - dead channel",
+  "midnight static - under my bed"
 ];
 
-let currentTrack = 0;
+let currentSong = 0;
 
-function nextTrack() {
-  currentTrack = (currentTrack + 1) % tracks.length;
-  document.getElementById("trackName").textContent = tracks[currentTrack];
+function nextSong() {
+  currentSong = (currentSong + 1) % songs.length;
+  document.getElementById("song").textContent = songs[currentSong];
 }
 
-function prevTrack() {
-  currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
-  document.getElementById("trackName").textContent = tracks[currentTrack];
+function prevSong() {
+  currentSong = (currentSong - 1 + songs.length) % songs.length;
+  document.getElementById("song").textContent = songs[currentSong];
 }
 
-function newGame() {
-  score = 0;
-  document.getElementById("score").textContent = score;
-  alert("game started");
+let views = localStorage.getItem("views");
+
+if (!views) {
+  views = 1;
+} else {
+  views = Number(views) + 1;
 }
+
+localStorage.setItem("views", views);
+
+document.getElementById("views").textContent = String(views).padStart(6, "0");
