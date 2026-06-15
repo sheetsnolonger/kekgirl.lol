@@ -3,97 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dead signal records</title>
+  <title>kekGirl records</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <div class="logo">dead signal</div>
-    <nav>
-      <a href="#">store</a>
-      <a href="#">catalog</a>
-      <a href="#">management</a>
-      <a href="#">live</a>
-      <a href="#">about</a>
-    </nav>
-  </header>
+  <div class="stars"></div>
 
-  <section class="hero">
-    <h1>dead signal records</h1>
-    <p>underground sounds, strange releases, limited vinyl, digital decay.</p>
-  </section>
+  <div class="page">
 
-  <section class="vinyl">
-    <h2>our vinyl</h2>
+    <header class="top">
+      <h1>kekGirl records</h1>
+      <p>online now ★ underground music label</p>
+    </header>
 
-    <div class="grid">
-      <div class="card">
-        <div class="cover">ghost</div>
-        <p>artist one — midnight static</p>
-        <button>buy now</button>
-      </div>
+    <marquee class="marquee">
+    ★ new releases soon ★
+    </marquee>
 
-      <div class="card">
-        <div class="cover">noise</div>
-        <p>artist two — signal rot</p>
-        <button>buy now</button>
-      </div>
+    <main class="layout">
 
-      <div class="card">
-        <div class="cover">dream</div>
-        <p>artist three — blue cassette</p>
-        <button>buy now</button>
-      </div>
+      <aside class="profile">
+        <div class="box">
+          <h2>profile</h2>
+          <div class="pfp">ds</div>
+          <p><b>status:</b> online</p>
+          <p><b>mood:</b> haunted</p>
+          <p><b>location:</b> the internet</p>
+          <p><b>genre:</b> electronic / noise / underground</p>
+        </div>
 
-      <div class="card">
-        <div class="cover">field</div>
-        <p>artist four — cracked glass</p>
-        <button>buy now</button>
-      </div>
-    </div>
-  </section>
+        <div class="box">
+          <h2>contact</h2>
+          <button>message</button>
+          <button>add friend</button>
+          <button>view catalog</button>
+          <button>shop vinyl</button>
+        </div>
 
-  <section class="listen">
-    <h2>✦ listen up ✦</h2>
-    <div class="tracks">
-      <p>under my bed</p>
-      <p>audio diary</p>
-      <p>and i dance</p>
-      <p>static angel</p>
-    </div>
+        <div class="box counter">
+          profile views<br>
+          <span id="views">000001</span>
+        </div>
+      </aside>
 
-    <div class="player">
-      <button onclick="prevTrack()">prev</button>
-      <span id="trackName">0:00 / 0:00</span>
-      <button onclick="nextTrack()">next</button>
-    </div>
-  </section>
+      <section class="main-content">
 
-  <section class="arcade">
-    <h2>rattlesnake</h2>
-    <p>score <span id="score">0</span></p>
-    <button onclick="newGame()">new game</button>
-    <p class="coin">— insert coin —</p>
+        <div class="box hero">
+          <h2>about us</h2>
+          <p>
+            dead signal records is a fake underground label page styled like an old
+            myspace profile. limited vinyl, broken mp3s, late night internet music,
+            and strange digital releases.
+          </p>
+        </div>
 
-    <div class="controls">
-      <button>▲</button>
-      <div>
-        <button>◀</button>
-        <button>▶</button>
-      </div>
-      <button>▼</button>
-    </div>
-  </section>
+        <div class="box">
+          <h2>currently listening to...</h2>
+          <div class="player">
+            <div class="disc"></div>
+            <div>
+              <p id="song">static angel - signal loss</p>
+              <button onclick="prevSong()">prev</button>
+              <button onclick="nextSong()">next</button>
+            </div>
+          </div>
+        </div>
 
-  <footer>
-    <a href="#">home</a>
-    <a href="#">catalog</a>
-    <a href="#">mgmt</a>
-    <a href="#">live</a>
-    <a href="#">about</a>
-    <a href="#">store</a>
-  </footer>
+        <div class="box">
+          <h2>latest releases</h2>
+          <div class="releases">
+            <div class="release">
+              <div class="cover">01</div>
+              <p>midnight static</p>
+            </div>
+            <div class="release">
+              <div class="cover">02</div>
+              <p>blue cassette</p>
+            </div>
+            <div class="release">
+              <div class="cover">03</div>
+              <p>signal rot</p>
+            </div>
+            <div class="release">
+              <div class="cover">04</div>
+              <p>ghost frequency</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2>blinkies</h2>
+          <div class="blinkies">
+            <span>mp3 hoarder</span>
+            <span>vinyl freak</span>
+            <span>scene label</span>
+            <span>no skips</span>
+            <span>online now</span>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      © 2026 kekGirl records
+    </footer>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
