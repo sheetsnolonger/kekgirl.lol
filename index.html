@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,296 +7,331 @@
 <title>hipuh</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
-:root {
-  --pink: #ff1493;
-  --darkpink: #d1007a;
-  --black: #000000;
+:root{
+  --pink:#ff1493;
+  --bg:#000;
+  --window:#070707;
 }
 
-* {
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  margin: 0;
-  background: #000;
-  color: var(--pink);
-  font-family: "VT323", monospace;
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(255,20,147,.15) 0%, transparent 30%),
-    radial-gradient(circle at 80% 70%, rgba(255,20,147,.1) 0%, transparent 30%);
-  overflow-x: hidden;
+body{
+  background:var(--bg);
+  color:var(--pink);
+  font-family:'Space Mono', monospace;
+  overflow-x:hidden;
+  min-height:100vh;
 }
 
-a {
-  color: #ff8ed5;
-  text-decoration: none;
-}
-
-a:hover {
-  color: white;
-  text-shadow: 0 0 10px var(--pink);
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* HEADER */
-
-.logo {
-  text-align: center;
-  font-size: clamp(4rem, 10vw, 8rem);
-  text-transform: lowercase;
-  letter-spacing: 8px;
-  color: var(--pink);
-  text-shadow:
-    0 0 10px var(--pink),
-    0 0 20px var(--pink),
-    0 0 40px var(--darkpink);
-  animation: flicker 3s infinite;
-}
-
-.tagline {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-@keyframes flicker {
-  0%,18%,22%,25%,53%,57%,100% {
-    opacity: 1;
-  }
-  20%,24%,55% {
-    opacity: .6;
-  }
-}
-
-/* OLD WEB MARQUEE */
-
-.marquee {
-  border: 2px solid var(--pink);
-  padding: 8px;
-  margin: 20px 0;
-  background: #111;
-}
-
-/* NAV */
-
-.nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
-}
-
-.nav a {
-  border: 2px solid var(--pink);
-  padding: 8px 14px;
-  background: #111;
-}
-
-/* CONTENT */
-
-.grid {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: 20px;
-}
-
-.panel {
-  border: 3px solid var(--pink);
-  background: #070707;
-  padding: 15px;
-  box-shadow: 0 0 20px rgba(255,20,147,.2);
-}
-
-.panel h2 {
-  margin-top: 0;
-  text-transform: lowercase;
-  border-bottom: 1px solid var(--pink);
-  padding-bottom: 5px;
-}
-
-/* BLINKIES */
-
-.blinkies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.blinkie {
-  width: 150px;
-  height: 20px;
-  background: linear-gradient(
-    90deg,
-    #000,
-    #ff1493,
-    #000
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+  repeating-linear-gradient(
+    transparent 0px,
+    transparent 2px,
+    rgba(255,20,147,.03) 3px
   );
-  border: 1px solid hotpink;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 14px;
-  animation: blinkie 1s infinite alternate;
+  pointer-events:none;
+  z-index:999;
 }
 
-@keyframes blinkie {
-  from { filter: brightness(1); }
-  to { filter: brightness(1.8); }
+.logo{
+  position:fixed;
+  top:25px;
+  left:40px;
+  font-size:8rem;
+  font-weight:700;
+  letter-spacing:-8px;
+  z-index:1;
+  text-transform:lowercase;
 }
 
-/* COUNTER */
-
-.counter {
-  font-size: 2rem;
-  text-align: center;
-  letter-spacing: 4px;
-  color: white;
+.subtitle{
+  position:fixed;
+  top:135px;
+  left:48px;
+  font-size:.9rem;
+  opacity:.7;
 }
 
-/* BUTTONS */
-
-.button88x31 {
-  width: 88px;
-  height: 31px;
-  border: 1px solid hotpink;
-  background: #111;
-  color: hotpink;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 4px;
-  font-size: 14px;
+.window{
+  position:absolute;
+  background:var(--window);
+  border:2px solid var(--pink);
+  box-shadow:0 0 25px rgba(255,20,147,.2);
 }
 
-/* FOOTER */
-
-.footer {
-  text-align: center;
-  margin-top: 30px;
-  padding: 20px;
-  border-top: 2px solid var(--pink);
+.titlebar{
+  padding:8px 10px;
+  border-bottom:1px solid var(--pink);
+  display:flex;
+  justify-content:space-between;
+  font-size:.8rem;
 }
 
-.starfield {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
+.content{
+  padding:15px;
+}
+
+.welcome{
+  width:320px;
+  top:220px;
+  left:60px;
+}
+
+.player{
+  width:350px;
+  top:140px;
+  right:80px;
+}
+
+.links{
+  width:250px;
+  top:520px;
+  left:100px;
+}
+
+.gallery{
+  width:520px;
+  top:340px;
+  right:120px;
+}
+
+.album-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.album{
+  aspect-ratio:1;
+  background:
+  linear-gradient(
+  135deg,
+  #ff1493,
+  #000
+  );
+  border:1px solid var(--pink);
+}
+
+.track{
+  margin:12px 0;
+}
+
+.progress{
+  width:100%;
+  height:6px;
+  background:#111;
+  border:1px solid var(--pink);
+}
+
+.progress span{
+  display:block;
+  width:40%;
+  height:100%;
+  background:var(--pink);
+}
+
+a{
+  color:var(--pink);
+  text-decoration:none;
+}
+
+a:hover{
+  color:white;
+}
+
+.popup{
+  position:fixed;
+  width:220px;
+  right:30px;
+  bottom:30px;
+  z-index:20;
+}
+
+.popup button{
+  margin-top:10px;
+  width:100%;
+  background:var(--pink);
+  border:none;
+  color:black;
+  padding:8px;
+  cursor:pointer;
+}
+
+.status{
+  position:fixed;
+  bottom:10px;
+  left:10px;
+  opacity:.6;
+  font-size:.8rem;
+}
+
+.noise{
+  position:fixed;
+  inset:0;
   background-image:
-    radial-gradient(white 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: .15;
+  radial-gradient(circle,#ff1493 1px,transparent 1px);
+  background-size:60px 60px;
+  opacity:.05;
+  pointer-events:none;
+}
+
+@media(max-width:900px){
+
+.logo{
+  position:relative;
+  left:auto;
+  top:auto;
+  font-size:4rem;
+  padding:20px;
+}
+
+.subtitle{
+  position:relative;
+  left:auto;
+  top:auto;
+  padding:0 20px 20px;
+}
+
+.window{
+  position:relative;
+  width:auto;
+  top:auto;
+  left:auto;
+  right:auto;
+  margin:20px;
+}
+
+.popup{
+  display:none;
+}
 }
 </style>
 </head>
+
 <body>
 
-<div class="starfield"></div>
+<div class="noise"></div>
 
-<div class="container">
+<div class="logo">hipuh</div>
+<div class="subtitle">
+digital waste • pink static • underground forever
+</div>
 
-  <div class="logo">hipuh</div>
-
-  <div class="tagline">
-    digital decay • hot pink static • underground internet
+<div class="window welcome">
+  <div class="titlebar">
+    <span>welcome.exe</span>
+    <span>[x]</span>
   </div>
 
-  <div class="marquee">
-    <marquee scrollamount="8">
-      welcome to hipuh ★ best viewed at 1024x768 ★ enter the void ★ under construction forever ★
-    </marquee>
+  <div class="content">
+    <p>
+      hipuh is a black and hot pink archive of
+      noise, distortion, forgotten media,
+      internet debris and digital artifacts.
+    </p>
+
+    <br>
+
+    <p>
+      currently online.
+    </p>
+  </div>
+</div>
+
+<div class="window player">
+  <div class="titlebar">
+    <span>music_player.exe</span>
+    <span>[x]</span>
   </div>
 
-  <nav class="nav">
-    <a href="#">home</a>
-    <a href="#">artists</a>
-    <a href="#">releases</a>
-    <a href="#">archive</a>
+  <div class="content">
+
+    <div class="track">
+      now playing:
+      <br><br>
+      pink static 01
+    </div>
+
+    <div class="progress">
+      <span></span>
+    </div>
+
+    <br>
+
+    ► play
+    &nbsp;&nbsp;
+    ▌▌ pause
+    &nbsp;&nbsp;
+    ■ stop
+
+  </div>
+</div>
+
+<div class="window gallery">
+  <div class="titlebar">
+    <span>releases.exe</span>
+    <span>[x]</span>
+  </div>
+
+  <div class="content">
+
+    <div class="album-grid">
+
+      <div class="album"></div>
+      <div class="album"></div>
+      <div class="album"></div>
+      <div class="album"></div>
+      <div class="album"></div>
+      <div class="album"></div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="window links">
+  <div class="titlebar">
+    <span>links.exe</span>
+    <span>[x]</span>
+  </div>
+
+  <div class="content">
+    <a href="#">artists</a><br><br>
+    <a href="#">archive</a><br><br>
+    <a href="#">shop</a><br><br>
+    <a href="#">guestbook</a><br><br>
     <a href="#">contact</a>
-  </nav>
+  </div>
+</div>
 
-  <div class="grid">
-
-    <aside class="panel">
-      <h2>blinkies</h2>
-
-      <div class="blinkies">
-        <div class="blinkie">hipuh.exe</div>
-        <div class="blinkie">pink noise</div>
-        <div class="blinkie">web decay</div>
-        <div class="blinkie">underground</div>
-        <div class="blinkie">404 soul</div>
-        <div class="blinkie">night mode</div>
-      </div>
-
-      <h2 style="margin-top:20px;">visitor count</h2>
-      <div class="counter">0001337</div>
-
-      <h2 style="margin-top:20px;">links</h2>
-      <p>
-        ▸ guestbook<br>
-        ▸ webring<br>
-        ▸ downloads<br>
-        ▸ mixtapes
-      </p>
-    </aside>
-
-    <main class="panel">
-
-      <h2>news</h2>
-
-      <p>
-        hipuh is a black and hot pink digital wasteland inspired by
-        early web culture, underground labels, personal sites,
-        net-art, and broken neon aesthetics.
-      </p>
-
-      <p>
-        expect static, distortion, obscure releases,
-        archived media, and endless scrolling through
-        forgotten corners of the internet.
-      </p>
-
-      <hr style="border-color: hotpink;">
-
-      <h2>featured</h2>
-
-      <p>
-        ▣ new compilation uploaded<br>
-        ▣ guestbook reopened<br>
-        ▣ web shrine updated<br>
-        ▣ blinkie pack available
-      </p>
-
-      <h2>88x31 buttons</h2>
-
-      <div>
-        <span class="button88x31">hipuh</span>
-        <span class="button88x31">pinkweb</span>
-        <span class="button88x31">static</span>
-        <span class="button88x31">net.art</span>
-      </div>
-
-    </main>
-
+<div class="window popup">
+  <div class="titlebar">
+    <span>warning</span>
+    <span>[x]</span>
   </div>
 
-  <div class="footer">
-    <marquee behavior="alternate">
-      © hipuh • forever under construction • made for the old web
-    </marquee>
-  </div>
+  <div class="content">
+    your system has detected
+    hipuh.exe
 
+    <button>install anyway</button>
+  </div>
+</div>
+
+<div class="status">
+visitor #00001337
 </div>
 
 </body>
 </html>
+```
