@@ -1,9 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background: #000;
     color: #ff3bd5;
-    font-family: "Courier New", monospace;
-    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    text-align: left;
 }
 
 a {
@@ -22,11 +27,12 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 58px;
+    font-size: 72px;
     text-transform: lowercase;
-    letter-spacing: -4px;
+    letter-spacing: -3px;
+    font-weight: bold;
     color: #ff3bd5;
-    text-shadow: 3px 3px 0 #52003f;
+    text-shadow: 4px 4px 0 #5b003e;
 }
 
 header p {
@@ -67,26 +73,30 @@ nav a {
 section {
     padding: 25px;
     border-bottom: 1px dotted #ff3bd5;
+    display: block;
+    text-align: left;
 }
 
 h2 {
-    margin-top: 0;
-    font-size: 26px;
+    margin: 0 0 15px;
+    font-size: 28px;
     text-transform: lowercase;
-    background: #ff3bd5;
-    color: #000;
-    display: inline-block;
-    padding: 2px 8px;
+    border-bottom: 1px solid #ff3bd5;
+    width: fit-content;
+    padding-right: 40px;
 }
 
 .grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 18px;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .card {
-    width: 190px;
+    width: 210px;
+    flex: 0 0 auto;
     color: #ff3bd5;
     background: #050005;
     border: 1px solid #ff3bd5;
@@ -103,7 +113,7 @@ h2 {
 
 .card img {
     width: 100%;
-    height: 130px;
+    height: 140px;
     object-fit: cover;
     border: 1px solid #ff3bd5;
     filter: contrast(150%) saturate(130%);
@@ -111,7 +121,7 @@ h2 {
 
 .card h3 {
     margin: 8px 0 4px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .card p {
@@ -119,14 +129,19 @@ h2 {
 }
 
 .card span {
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: underline;
+}
+
+.artist-list {
+    text-align: left;
+    margin: 0;
 }
 
 .artist-list a {
     display: block;
     width: fit-content;
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 8px;
     border: 1px solid #ff3bd5;
     padding: 3px 8px;
@@ -137,7 +152,8 @@ h2 {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-width: 700px;
+    max-width: 500px;
+    text-align: left;
 }
 
 .catalog li {
@@ -168,7 +184,7 @@ footer {
     border-top: 2px dashed #ff3bd5;
     color: #ff9bea;
     background: #050005;
-    text-align: center;
+    text-align: left;
 }
 
 .footer-links {
