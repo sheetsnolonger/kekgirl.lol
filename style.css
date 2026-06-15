@@ -127,3 +127,35 @@ footer {
     margin-top: 40px;
     padding-bottom: 130px;
 }
+
+.release-list {
+    display: block;
+}
+
+.release-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 22px;
+    color: #ff4fcf;
+    text-decoration: none;
+    max-width: 520px;
+}
+
+.release-row img {
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+}
+
+.release-row h3 {
+    margin: 0 0 4px;
+    font-weight: normal;
+}
+
+.release-row p {
+    margin: 0 0 4px;
+}
+
+.release-row:hover {
+    color: white;
+}
