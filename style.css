@@ -1,157 +1,182 @@
 body {
     margin: 0;
     background: #000;
-    color: #ff4fcf;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #ff3bd5;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+}
+
+a {
+    color: #ff3bd5;
+}
+
+a:hover {
+    background: #ff3bd5;
+    color: #000;
 }
 
 header {
-    padding: 50px 30px 20px;
+    padding: 25px;
+    border-bottom: 2px dashed #ff3bd5;
 }
 
 h1 {
     margin: 0;
-    font-size: 72px;
+    font-size: 58px;
     text-transform: lowercase;
-    letter-spacing: -3px;
-    color: #ff4fcf;
-    text-shadow: 3px 3px #6b004f;
+    letter-spacing: -4px;
+    color: #ff3bd5;
+    text-shadow: 3px 3px 0 #52003f;
 }
 
 header p {
-    color: #ff99e8;
-    margin-top: 10px;
+    margin: 5px 0 0;
+    color: #ff9bea;
 }
 
 nav {
-    padding: 20px 30px;
-    border-top: 1px solid #ff4fcf;
-    border-bottom: 1px solid #ff4fcf;
-    background: #000;
+    padding: 12px 25px;
+    border-bottom: 1px solid #ff3bd5;
+    background: #080008;
     position: sticky;
     top: 0;
     z-index: 5;
 }
 
 nav a {
-    color: #ff4fcf;
+    margin-right: 12px;
     text-decoration: none;
-    margin-right: 20px;
-    text-transform: lowercase;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #ffffff;
-    text-decoration: underline;
+    border: 1px solid #ff3bd5;
+    padding: 3px 6px;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 .blinkies {
-    padding: 20px 30px;
+    padding: 12px 25px;
+    border-bottom: 1px dashed #ff3bd5;
+    background: #030003;
 }
 
 .blinkies img {
-    height: 20px;
-    margin-right: 8px;
+    height: 18px;
+    margin-right: 4px;
     image-rendering: pixelated;
 }
 
 section {
-    padding: 35px 30px;
+    padding: 25px;
+    border-bottom: 1px dotted #ff3bd5;
 }
 
 h2 {
-    color: #ff4fcf;
+    margin-top: 0;
+    font-size: 26px;
     text-transform: lowercase;
-    border-bottom: 1px solid #ff4fcf;
-    padding-bottom: 10px;
+    background: #ff3bd5;
+    color: #000;
+    display: inline-block;
+    padding: 2px 8px;
 }
 
 .grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 14px;
 }
 
 .card {
-    width: 220px;
-    background: #0b0b0b;
-    border: 1px solid #ff4fcf;
-    padding: 12px;
+    width: 190px;
+    color: #ff3bd5;
+    background: #050005;
+    border: 1px solid #ff3bd5;
+    padding: 8px;
     text-decoration: none;
-    color: #ff4fcf;
-    transition: 0.2s;
+    box-shadow: 5px 5px 0 #39002d;
 }
 
 .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(255, 79, 207, 0.4);
+    transform: rotate(-1deg);
+    background: #ff3bd5;
+    color: #000;
 }
 
 .card img {
     width: 100%;
-    height: 160px; /* smaller than before */
+    height: 130px;
     object-fit: cover;
-    border: 1px solid #ff4fcf;
+    border: 1px solid #ff3bd5;
+    filter: contrast(150%) saturate(130%);
 }
 
 .card h3 {
-    margin: 12px 0 6px;
+    margin: 8px 0 4px;
+    font-size: 16px;
 }
 
 .card p {
-    margin: 0 0 10px;
-    color: #ff99e8;
+    margin: 0 0 8px;
 }
 
 .card span {
-    color: #ffffff;
-    font-size: 13px;
+    font-size: 12px;
+    text-decoration: underline;
 }
 
 .artist-list a {
     display: block;
-    color: #ff4fcf;
+    width: fit-content;
+    font-size: 18px;
+    margin-bottom: 8px;
+    border: 1px solid #ff3bd5;
+    padding: 3px 8px;
     text-decoration: none;
-    margin-bottom: 12px;
-    font-size: 22px;
-}
-
-.artist-list a:hover {
-    color: #ffffff;
 }
 
 .catalog {
     list-style: none;
     padding: 0;
+    margin: 0;
+    max-width: 700px;
 }
 
 .catalog li {
-    padding: 10px 0;
-    border-bottom: 1px dotted #ff4fcf;
+    padding: 8px;
+    border-bottom: 1px dotted #ff3bd5;
+}
+
+.catalog li:nth-child(odd) {
+    background: #090009;
 }
 
 .catalog a {
-    color: #ff4fcf;
     text-decoration: none;
-}
-
-.catalog a:hover {
-    color: white;
 }
 
 .corner-image {
     position: fixed;
-    right: 15px;
-    bottom: 15px;
-    width: 110px; /* smaller mascot */
+    right: 12px;
+    bottom: 12px;
+    width: 95px;
     z-index: 20;
     pointer-events: none;
+    image-rendering: pixelated;
 }
 
 footer {
-    padding: 40px 30px;
-    color: #ff99e8;
-    border-top: 1px solid #ff4fcf;
-    margin-top: 40px;
+    padding: 30px 25px 120px;
+    border-top: 2px dashed #ff3bd5;
+    color: #ff9bea;
+    background: #050005;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    border: 1px solid #ff3bd5;
+    padding: 4px 8px;
+    text-decoration: none;
 }
