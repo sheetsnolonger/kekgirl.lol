@@ -1,15 +1,19 @@
+```css
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background: #000;
+    padding: 20px;
+    background: #000000;
     color: #ff4fcf;
     font-family: "Times New Roman", Times, serif;
     font-size: 18px;
-    padding: 20px;
+    line-height: 1.3;
 }
+
+/* links */
 
 a {
     color: #ff4fcf;
@@ -17,12 +21,14 @@ a {
 }
 
 a:visited {
-    color: #d42aa9;
+    color: #d438aa;
 }
 
 a:hover {
-    color: white;
+    color: #ffffff;
 }
+
+/* header */
 
 header {
     margin-bottom: 20px;
@@ -35,8 +41,10 @@ h1 {
 }
 
 header p {
-    margin-top: 5px;
+    margin: 4px 0 0;
 }
+
+/* nav */
 
 nav {
     margin-bottom: 20px;
@@ -46,6 +54,8 @@ nav a {
     margin-right: 12px;
 }
 
+/* blinkies */
+
 .blinkies {
     margin-bottom: 25px;
 }
@@ -53,8 +63,11 @@ nav a {
 .blinkies img {
     height: 20px;
     margin-right: 4px;
+    vertical-align: middle;
     image-rendering: pixelated;
 }
+
+/* sections */
 
 section {
     margin-bottom: 35px;
@@ -66,6 +79,8 @@ h2 {
     font-weight: normal;
 }
 
+/* releases */
+
 .grid {
     display: block;
 }
@@ -73,7 +88,7 @@ h2 {
 .card {
     display: block;
     width: 220px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #ff4fcf;
     text-decoration: none;
 }
@@ -82,7 +97,7 @@ h2 {
     display: block;
     width: 220px;
     height: auto;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .card h3 {
@@ -99,10 +114,14 @@ h2 {
     display: block;
 }
 
+/* artist list */
+
 .artist-list a {
     display: block;
     margin-bottom: 8px;
 }
+
+/* catalog */
 
 .catalog {
     list-style: none;
@@ -114,19 +133,7 @@ h2 {
     margin-bottom: 6px;
 }
 
-.corner-image {
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    width: 125px;
-    pointer-events: none;
-    image-rendering: pixelated;
-}
-
-footer {
-    margin-top: 40px;
-    padding-bottom: 130px;
-}
+/* release archive page */
 
 .release-list {
     display: block;
@@ -134,11 +141,12 @@ footer {
 
 .release-row {
     display: flex;
+    align-items: flex-start;
     gap: 12px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     color: #ff4fcf;
     text-decoration: none;
-    max-width: 520px;
+    max-width: 500px;
 }
 
 .release-row img {
@@ -156,6 +164,56 @@ footer {
     margin: 0 0 4px;
 }
 
-.release-row:hover {
-    color: white;
+/* mascot */
+
+.corner-image {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 180px;
+    pointer-events: none;
+    image-rendering: pixelated;
+    z-index: 999;
 }
+
+/* footer */
+
+footer {
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.footer-links {
+    margin-top: 8px;
+}
+
+/* phones */
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .card,
+    .card img {
+        width: 180px;
+    }
+
+    .corner-image {
+        width: 130px;
+    }
+
+    .release-row {
+        flex-direction: column;
+    }
+
+    .release-row img {
+        width: 120px;
+        height: auto;
+    }
+}
+```
