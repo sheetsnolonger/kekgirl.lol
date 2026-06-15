@@ -5,194 +5,163 @@
 body {
     margin: 0;
     background: #000;
-    color: #ff3bd5;
+    color: #ff4fcf;
     font-family: "Times New Roman", Times, serif;
     font-size: 18px;
     text-align: left;
 }
 
 a {
-    color: #ff3bd5;
+    color: #ff4fcf;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #d42aa9;
 }
 
 a:hover {
-    background: #ff3bd5;
-    color: #000;
+    color: #fff;
+    background: #ff4fcf;
 }
 
 header {
-    padding: 25px;
-    border-bottom: 2px dashed #ff3bd5;
+    padding: 20px;
+    border-bottom: 1px solid #ff4fcf;
 }
 
 h1 {
     margin: 0;
-    font-size: 72px;
-    text-transform: lowercase;
-    letter-spacing: -3px;
-    font-weight: bold;
-    color: #ff3bd5;
-    text-shadow: 4px 4px 0 #5b003e;
+    font-size: 52px;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #ff4fcf;
 }
 
 header p {
-    margin: 5px 0 0;
-    color: #ff9bea;
+    margin: 4px 0 0;
+    color: #ff8cdf;
 }
 
 nav {
-    padding: 12px 25px;
-    border-bottom: 1px solid #ff3bd5;
-    background: #080008;
-    position: sticky;
-    top: 0;
-    z-index: 5;
+    padding: 8px 20px;
+    border-bottom: 1px solid #ff4fcf;
+    background: #090009;
 }
 
 nav a {
     margin-right: 12px;
-    text-decoration: none;
-    border: 1px solid #ff3bd5;
-    padding: 3px 6px;
-    display: inline-block;
-    margin-bottom: 5px;
+    font-size: 16px;
 }
 
 .blinkies {
-    padding: 12px 25px;
-    border-bottom: 1px dashed #ff3bd5;
-    background: #030003;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ff4fcf;
 }
 
 .blinkies img {
-    height: 18px;
+    height: 20px;
     margin-right: 4px;
     image-rendering: pixelated;
 }
 
 section {
-    padding: 25px;
-    border-bottom: 1px dotted #ff3bd5;
-    display: block;
-    text-align: left;
+    padding: 20px;
+    border-bottom: 1px solid #ff4fcf;
 }
 
 h2 {
-    margin: 0 0 15px;
+    margin: 0 0 12px;
     font-size: 28px;
-    text-transform: lowercase;
-    border-bottom: 1px solid #ff3bd5;
-    width: fit-content;
-    padding-right: 40px;
+    font-weight: normal;
+    color: #ff4fcf;
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: block;
 }
 
 .card {
-    width: 210px;
-    flex: 0 0 auto;
-    color: #ff3bd5;
-    background: #050005;
-    border: 1px solid #ff3bd5;
+    display: block;
+    width: 230px;
+    margin-bottom: 18px;
     padding: 8px;
+    color: #ff4fcf;
+    background: #050005;
+    border: 1px solid #ff4fcf;
     text-decoration: none;
-    box-shadow: 5px 5px 0 #39002d;
 }
 
 .card:hover {
-    transform: rotate(-1deg);
-    background: #ff3bd5;
-    color: #000;
+    color: #fff;
+    background: #180014;
 }
 
 .card img {
+    display: block;
     width: 100%;
-    height: 140px;
+    height: 145px;
     object-fit: cover;
-    border: 1px solid #ff3bd5;
-    filter: contrast(150%) saturate(130%);
+    border: 1px solid #ff4fcf;
+    margin-bottom: 6px;
 }
 
 .card h3 {
-    margin: 8px 0 4px;
+    margin: 4px 0;
     font-size: 20px;
+    font-weight: normal;
 }
 
 .card p {
-    margin: 0 0 8px;
+    margin: 4px 0;
 }
 
 .card span {
-    font-size: 14px;
+    display: block;
+    margin-top: 6px;
     text-decoration: underline;
 }
 
 .artist-list {
-    text-align: left;
     margin: 0;
 }
 
 .artist-list a {
     display: block;
-    width: fit-content;
-    font-size: 22px;
     margin-bottom: 8px;
-    border: 1px solid #ff3bd5;
-    padding: 3px 8px;
-    text-decoration: none;
+    width: fit-content;
 }
 
 .catalog {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-width: 500px;
-    text-align: left;
+    max-width: 600px;
 }
 
 .catalog li {
-    padding: 8px;
-    border-bottom: 1px dotted #ff3bd5;
-}
-
-.catalog li:nth-child(odd) {
-    background: #090009;
-}
-
-.catalog a {
-    text-decoration: none;
+    padding: 6px 0;
+    border-bottom: 1px dotted #ff4fcf;
 }
 
 .corner-image {
     position: fixed;
     right: 12px;
     bottom: 12px;
-    width: 95px;
+    width: 125px;
     z-index: 20;
     pointer-events: none;
     image-rendering: pixelated;
 }
 
 footer {
-    padding: 30px 25px 120px;
-    border-top: 2px dashed #ff3bd5;
-    color: #ff9bea;
-    background: #050005;
-    text-align: left;
+    padding: 20px 20px 130px;
+    color: #ff8cdf;
+    background: #000;
+    border-top: 1px solid #ff4fcf;
 }
 
 .footer-links {
-    margin-top: 10px;
-}
-
-.footer-links a {
-    border: 1px solid #ff3bd5;
-    padding: 4px 8px;
-    text-decoration: none;
+    margin-top: 8px;
 }
