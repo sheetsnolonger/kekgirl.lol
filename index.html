@@ -1,117 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>kekGirl records</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="stars"></div>
+<header>
+  <h1>kekGirl records</h1>
+  <p>independent sounds / weird internet music / tapes / files</p>
+</header>
 
-  <div class="page">
+<nav>
+  <a href="#latest">latest releases</a>
+  <a href="#joined">new artists</a>
+  <a href="#featured">featured</a>
+  <a href="#catalog">catalog</a>
+</nav>
 
-    <header class="top">
-      <h1>kekGirl records</h1>
-      <p>online now ★ underground music label</p>
-    </header>
+<div class="blinkies">
+  <img src="assets/blinkie1.gif">
+  <img src="assets/blinkie2.gif">
+  <img src="assets/blinkie1.gif">
+</div>
 
-    <marquee class="marquee">
-    ★ new releases soon ★
-    </marquee>
+<section id="latest">
+  <h2>latest releases</h2>
 
-    <main class="layout">
+  <div class="grid">
+    <a class="card" href="https://bandcamp.com" target="_blank">
+      <img src="assets/release1.jpg">
+      <h3>artist name</h3>
+      <p>song / album title</p>
+      <span>listen on bandcamp</span>
+    </a>
 
-      <aside class="profile">
-        <div class="box">
-          <h2>profile</h2>
-          <div class="pfp">ds</div>
-          <p><b>status:</b> online</p>
-          <p><b>mood:</b> haunted</p>
-          <p><b>location:</b> the internet</p>
-          <p><b>genre:</b> electronic / noise / underground</p>
-        </div>
-
-        <div class="box">
-          <h2>contact</h2>
-          <button>message</button>
-          <button>add friend</button>
-          <button>view catalog</button>
-          <button>shop vinyl</button>
-        </div>
-
-        <div class="box counter">
-          profile views<br>
-          <span id="views">000001</span>
-        </div>
-      </aside>
-
-      <section class="main-content">
-
-        <div class="box hero">
-          <h2>about us</h2>
-          <p>
-            dead signal records is a fake underground label page styled like an old
-            myspace profile. limited vinyl, broken mp3s, late night internet music,
-            and strange digital releases.
-          </p>
-        </div>
-
-        <div class="box">
-          <h2>currently listening to...</h2>
-          <div class="player">
-            <div class="disc"></div>
-            <div>
-              <p id="song">static angel - signal loss</p>
-              <button onclick="prevSong()">prev</button>
-              <button onclick="nextSong()">next</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <h2>latest releases</h2>
-          <div class="releases">
-            <div class="release">
-              <div class="cover">01</div>
-              <p>midnight static</p>
-            </div>
-            <div class="release">
-              <div class="cover">02</div>
-              <p>blue cassette</p>
-            </div>
-            <div class="release">
-              <div class="cover">03</div>
-              <p>signal rot</p>
-            </div>
-            <div class="release">
-              <div class="cover">04</div>
-              <p>ghost frequency</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <h2>blinkies</h2>
-          <div class="blinkies">
-            <span>mp3 hoarder</span>
-            <span>vinyl freak</span>
-            <span>scene label</span>
-            <span>no skips</span>
-            <span>online now</span>
-          </div>
-        </div>
-
-      </section>
-    </main>
-
-    <footer>
-      © 2026 kekGirl records
-    </footer>
-
+    <a class="card" href="https://bandcamp.com" target="_blank">
+      <img src="assets/release2.jpg">
+      <h3>artist name</h3>
+      <p>new single</p>
+      <span>listen on bandcamp</span>
+    </a>
   </div>
+</section>
 
-  <script src="script.js"></script>
+<section id="joined">
+  <h2>latest artists that joined</h2>
+
+  <div class="artist-list">
+    <a href="https://bandcamp.com" target="_blank">artist one</a>
+    <a href="https://bandcamp.com" target="_blank">artist two</a>
+    <a href="https://bandcamp.com" target="_blank">artist three</a>
+  </div>
+</section>
+
+<section id="featured">
+  <h2>featured artists</h2>
+
+  <div class="grid">
+    <a class="card" href="https://bandcamp.com" target="_blank">
+      <img src="assets/artist1.jpg">
+      <h3>featured artist</h3>
+      <p>noisy, emotional, underground</p>
+    </a>
+  </div>
+</section>
+
+<section id="catalog">
+  <h2>catalog</h2>
+
+  <ul class="catalog">
+    <li><a href="https://bandcamp.com" target="_blank">001 — artist — release title</a></li>
+    <li><a href="https://bandcamp.com" target="_blank">002 — artist — release title</a></li>
+    <li><a href="https://bandcamp.com" target="_blank">003 — artist — release title</a></li>
+  </ul>
+</section>
+
+<div class="cool-images">
+  <img src="assets/release1.jpg">
+  <img src="assets/release2.jpg">
+  <img src="assets/artist1.jpg">
+</div>
+
+<img class="corner-image" src="assets/mascot.png">
+
+<footer>
+  © 2026 kekGirl records
+</footer>
+
 </body>
 </html>
