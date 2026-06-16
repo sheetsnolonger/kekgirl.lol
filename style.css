@@ -233,3 +233,25 @@ iframe {
         width: 280px;
     }
 }
+
+/* homepage logo */
+
+.logo {
+    display: block;
+    width: 180px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+/* smaller logo on other pages */
+
+.logo-small {
+    display: block;
+    width: 110px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.logo-small:hover {
+    opacity: 0.8;
+}
