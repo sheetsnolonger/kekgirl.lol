@@ -259,7 +259,7 @@ iframe {
 .grid {
     display: flex;
     gap: 20px;
-    justify-content: flex-end; /* align to the right */
+    justify-content: flex-start; /* align to the left */
     flex-wrap: nowrap;
 }
 
