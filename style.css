@@ -258,9 +258,9 @@ iframe {
 
 .grid {
     display: flex;
-    justify-content: center;
     gap: 20px;
-    flex-wrap: nowrap; /* keeps them side by side */
+    justify-content: flex-end; /* align to the right */
+    flex-wrap: nowrap;
 }
 
 .card {
