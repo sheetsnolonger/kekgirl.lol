@@ -255,3 +255,15 @@ iframe {
 .logo-small:hover {
     opacity: 0.8;
 }
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap; /* keeps them side by side */
+}
+
+.card {
+    width: 250px;
+    flex-shrink: 0;
+}
