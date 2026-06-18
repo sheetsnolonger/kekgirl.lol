@@ -267,3 +267,14 @@ iframe {
     width: 250px;
     flex-shrink: 0;
 }
+
+.footer-fanart {
+    margin-bottom: 10px;
+}
+
+.footer-fanart img {
+    width: 80px;
+    height: auto;
+    margin-right: 6px;
+    vertical-align: middle;
+}
